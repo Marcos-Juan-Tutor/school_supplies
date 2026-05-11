@@ -11,7 +11,6 @@ if (isset($_POST['submit'])) {
     $quantity = intval($_POST['quantity']);
     $amount_sold = intval($_POST['amount_sold']);
 
-    // Auto-calculate revenue
     $revenue = $price * $amount_sold;
 
     if (empty($item) || empty($category) || $price <= 0 || $quantity < 0 || $amount_sold < 0) {

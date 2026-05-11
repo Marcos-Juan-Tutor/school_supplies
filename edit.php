@@ -22,12 +22,11 @@ if (isset($_POST['update'])) {
     $price       = floatval($_POST['price']);
     $quantity    = intval($_POST['quantity']);
     $amount_sold = intval($_POST['amount_sold']);
-    $revenue     = $price * $amount_sold; // Auto-calculate
+    $revenue     = $price * $amount_sold;
 
     if (empty($item) || empty($category) || $price <= 0) {
         $error = "Please fill in all fields with valid values.";
     } else {
-        // s=string, s=string, i=int(amount_sold), d=double(price), i=int(quantity), d=double(revenue), i=int(id)
         $stmt = $conn->prepare("UPDATE supplies SET item=?, category=?, amount_sold=?, price=?, quantity=?, revenue=? WHERE id=?");
         $stmt->bind_param("ssididi", $item, $category, $amount_sold, $price, $quantity, $revenue, $id);
 

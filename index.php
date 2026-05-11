@@ -50,7 +50,6 @@ $stats = $conn->query("SELECT COUNT(*) as total, SUM(revenue) as total_revenue, 
             <span class="nav-title">Supplies Manager</span>
         </nav>
 
-        <!-- Stats Cards -->
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-info">
