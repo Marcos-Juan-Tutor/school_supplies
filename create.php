@@ -16,7 +16,6 @@ if (isset($_POST['submit'])) {
     if (empty($item) || empty($category) || $price <= 0 || $quantity < 0 || $amount_sold < 0) {
         $error = "Please fill in all fields with valid values.";
     } else {
-        // s=string, s=string, i=int(amount_sold), d=double(price), i=int(quantity), d=double(revenue)
         $stmt = $conn->prepare("INSERT INTO supplies (item, category, amount_sold, price, quantity, revenue) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssidid", $item, $category, $amount_sold, $price, $quantity, $revenue);
 
