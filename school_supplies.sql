@@ -56,7 +56,6 @@ ALTER TABLE `supplies`
 
 --
 -- AUTO_INCREMENT for table `supplies`
---
 
 ALTER TABLE `supplies`
   MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
