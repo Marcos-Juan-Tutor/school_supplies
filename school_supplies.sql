@@ -58,10 +58,6 @@ ALTER TABLE `supplies`
 -- AUTO_INCREMENT for table `supplies`
 
 ALTER TABLE `supplies`
-  ADD COLUMN `image` VARCHAR(255) DEFAULT NULL AFTER `revenue`;
---
-
-ALTER TABLE `supplies`
   MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 COMMIT;
